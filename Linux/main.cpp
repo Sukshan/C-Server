@@ -25,7 +25,7 @@ int main(){
     inet_pton(AF_INET, "0.0.0.0", &hint.sin_addr);
 
 
-    if(bind(listening, AF_INET, (sockaddr*)&hint, sizeof(hint)== -1)){
+    if(bind(listening, (sockaddr*)&hint, sizeof(hint))== -1){
         cerr << "can't bind to IP/ Port";
         return -2;
     }
