@@ -61,7 +61,7 @@ int main(){
 
     if(result){
 
-        cout << host << " connected on " << service <<endl;
+        cout << host << " connected on " << svc <<endl;
 
     }
     else{
@@ -85,7 +85,7 @@ int main(){
             cerr << "There was a connection issue " << endl;
         }
 
-        if(byesRecv == 0){
+        if(bytesRecv == 0){
             cout << "The client disconnected" << endl;
         }
 
