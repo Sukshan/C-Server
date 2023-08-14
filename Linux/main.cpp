@@ -93,9 +93,13 @@ int main(){
         // Display message
         cout << "Received: " << string(buf, 0, bytesRecv) << endl;
 
+        // Create response
+        cout<<"Enter a response: ";
+        string response;
+        getline(cin, response);
 
         // Resend Message
-        send(clientSocket, buf, bytesRecv + 1, 0);
+        send(clientSocket, response.c_str(), response.size() + 1, 0);
 
     }
 
